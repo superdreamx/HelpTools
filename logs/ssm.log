@@ -1,0 +1,570 @@
+[INFO] [2017-08-04 11:29:09][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mybatis.xml]
+[ERROR] [2017-08-04 11:29:09][org.springframework.test.context.TestContextManager]Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@68bbe345] to prepare test instance [test.TestMyBatis@30b8a058]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:319)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:232)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:175)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from class path resource [spring-mybatis.xml]; nested exception is java.io.FileNotFoundException: class path resource [spring-mybatis.xml] cannot be opened because it does not exist
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:343)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:303)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:180)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:216)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:187)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:251)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadBeanDefinitions(AbstractGenericContextLoader.java:235)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:118)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:100)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:250)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:64)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
+	... 25 more
+Caused by: java.io.FileNotFoundException: class path resource [spring-mybatis.xml] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:158)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:329)
+	... 37 more
+[INFO] [2017-08-04 11:29:44][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-datasource.xml]
+[INFO] [2017-08-04 11:29:45][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@783e6358: startup date [Fri Aug 04 11:29:45 CST 2017]; root of context hierarchy
+[WARN] [2017-08-04 11:29:46][org.mybatis.spring.mapper.ClassPathMapperScanner]No MyBatis mapper was found in '[cn.unipus.ucladmin.dao]' package. Please check your configuration.
+[INFO] [2017-08-04 11:29:46][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from URL [file:/C:/Users/wys/Documents/workspace-sts/HelpTools/target/classes/database.properties]
+[INFO] [2017-08-04 11:29:46][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[ERROR] [2017-08-04 11:29:46][org.springframework.test.context.TestContextManager]Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@5be6e01c] to prepare test instance [test.TestMyBatis@1c93084c]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:319)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:232)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:175)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager' defined in class path resource [spring-datasource.xml]: Cannot resolve reference to bean 'dataSource' while setting bean property 'dataSource'; nested exception is org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [com.alibaba.druid.pool.DruidDataSource] for bean with name 'dataSource' defined in class path resource [spring-datasource.xml]; nested exception is java.lang.ClassNotFoundException: com.alibaba.druid.pool.DruidDataSource
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:328)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:107)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1456)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1197)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:700)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:121)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:100)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:250)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:64)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
+	... 25 more
+Caused by: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [com.alibaba.druid.pool.DruidDataSource] for bean with name 'dataSource' defined in class path resource [spring-datasource.xml]; nested exception is java.lang.ClassNotFoundException: com.alibaba.druid.pool.DruidDataSource
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1327)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:452)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:320)
+	... 43 more
+Caused by: java.lang.ClassNotFoundException: com.alibaba.druid.pool.DruidDataSource
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.springframework.util.ClassUtils.forName(ClassUtils.java:236)
+	at org.springframework.beans.factory.support.AbstractBeanDefinition.resolveBeanClass(AbstractBeanDefinition.java:392)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doResolveBeanClass(AbstractBeanFactory.java:1348)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1319)
+	... 49 more
+[INFO] [2017-08-04 11:33:54][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from URL [file:/C:/Users/wys/Documents/workspace-sts/HelpTools/target/classes/spring-datasource.xml]
+[INFO] [2017-08-04 11:33:55][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@13fee20c: startup date [Fri Aug 04 11:33:55 CST 2017]; root of context hierarchy
+[WARN] [2017-08-04 11:33:56][org.mybatis.spring.mapper.ClassPathMapperScanner]No MyBatis mapper was found in '[cn.unipus.ucladmin.dao]' package. Please check your configuration.
+[INFO] [2017-08-04 11:33:56][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from URL [file:/C:/Users/wys/Documents/workspace-sts/HelpTools/target/classes/database.properties]
+[INFO] [2017-08-04 11:33:56][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[ERROR] [2017-08-04 11:33:56][org.springframework.test.context.TestContextManager]Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@36c88a32] to prepare test instance [test.TestMyBatis@7880cdf3]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:319)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:232)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:175)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager' defined in URL [file:/C:/Users/wys/Documents/workspace-sts/HelpTools/target/classes/spring-datasource.xml]: Cannot resolve reference to bean 'dataSource' while setting bean property 'dataSource'; nested exception is org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [com.alibaba.druid.pool.DruidDataSource] for bean with name 'dataSource' defined in URL [file:/C:/Users/wys/Documents/workspace-sts/HelpTools/target/classes/spring-datasource.xml]; nested exception is java.lang.ClassNotFoundException: com.alibaba.druid.pool.DruidDataSource
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:328)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:107)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1456)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1197)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:700)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:121)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:100)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:250)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:64)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
+	... 25 more
+Caused by: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [com.alibaba.druid.pool.DruidDataSource] for bean with name 'dataSource' defined in URL [file:/C:/Users/wys/Documents/workspace-sts/HelpTools/target/classes/spring-datasource.xml]; nested exception is java.lang.ClassNotFoundException: com.alibaba.druid.pool.DruidDataSource
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1327)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:452)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:320)
+	... 43 more
+Caused by: java.lang.ClassNotFoundException: com.alibaba.druid.pool.DruidDataSource
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.springframework.util.ClassUtils.forName(ClassUtils.java:236)
+	at org.springframework.beans.factory.support.AbstractBeanDefinition.resolveBeanClass(AbstractBeanDefinition.java:392)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doResolveBeanClass(AbstractBeanFactory.java:1348)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1319)
+	... 49 more
+[INFO] [2017-08-04 11:38:43][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-datasource.xml]
+[INFO] [2017-08-04 11:38:44][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@783e6358: startup date [Fri Aug 04 11:38:44 CST 2017]; root of context hierarchy
+[INFO] [2017-08-04 11:38:45][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from URL [file:/C:/Users/wys/Documents/workspace-sts/HelpTools/target/classes/database.properties]
+[INFO] [2017-08-04 11:38:45][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[ERROR] [2017-08-04 11:38:45][org.springframework.test.context.TestContextManager]Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@703580bf] to prepare test instance [test.TestMyBatis@3e92efc3]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:319)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:232)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:175)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager' defined in class path resource [spring-datasource.xml]: Cannot resolve reference to bean 'dataSource' while setting bean property 'dataSource'; nested exception is org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [com.alibaba.druid.pool.DruidDataSource] for bean with name 'dataSource' defined in class path resource [spring-datasource.xml]; nested exception is java.lang.ClassNotFoundException: com.alibaba.druid.pool.DruidDataSource
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:328)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:107)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1456)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1197)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:700)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:121)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:100)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:250)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:64)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
+	... 25 more
+Caused by: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [com.alibaba.druid.pool.DruidDataSource] for bean with name 'dataSource' defined in class path resource [spring-datasource.xml]; nested exception is java.lang.ClassNotFoundException: com.alibaba.druid.pool.DruidDataSource
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1327)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:452)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:320)
+	... 43 more
+Caused by: java.lang.ClassNotFoundException: com.alibaba.druid.pool.DruidDataSource
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.springframework.util.ClassUtils.forName(ClassUtils.java:236)
+	at org.springframework.beans.factory.support.AbstractBeanDefinition.resolveBeanClass(AbstractBeanDefinition.java:392)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doResolveBeanClass(AbstractBeanFactory.java:1348)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1319)
+	... 49 more
+[INFO] [2017-08-04 13:41:08][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-datasource.xml]
+[INFO] [2017-08-04 13:41:10][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [applicationContext.xml]
+[ERROR] [2017-08-04 13:41:10][org.springframework.test.context.TestContextManager]Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@2e6a8155] to prepare test instance [test.TestMyBatis@6221a451]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:319)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:232)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:175)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from class path resource [applicationContext.xml]; nested exception is java.io.FileNotFoundException: class path resource [applicationContext.xml] cannot be opened because it does not exist
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:343)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:303)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:180)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:216)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:187)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:251)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadBeanDefinitions(AbstractGenericContextLoader.java:235)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:118)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:100)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:250)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:64)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
+	... 25 more
+Caused by: java.io.FileNotFoundException: class path resource [applicationContext.xml] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:158)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:329)
+	... 37 more
+[INFO] [2017-08-04 13:42:04][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-datasource.xml]
+[INFO] [2017-08-04 13:42:04][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@783e6358: startup date [Fri Aug 04 13:42:04 CST 2017]; root of context hierarchy
+[INFO] [2017-08-04 13:42:05][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from URL [file:/C:/Users/wys/Documents/workspace-sts/HelpTools/target/classes/database.properties]
+[INFO] [2017-08-04 13:42:05][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[ERROR] [2017-08-04 13:42:05][org.springframework.test.context.TestContextManager]Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@703580bf] to prepare test instance [test.TestMyBatis@3e92efc3]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:319)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:232)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:175)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager' defined in class path resource [spring-datasource.xml]: Cannot resolve reference to bean 'dataSource' while setting bean property 'dataSource'; nested exception is org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [com.alibaba.druid.pool.DruidDataSource] for bean with name 'dataSource' defined in class path resource [spring-datasource.xml]; nested exception is java.lang.ClassNotFoundException: com.alibaba.druid.pool.DruidDataSource
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:328)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:107)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1456)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1197)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:700)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:121)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:100)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:250)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:64)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
+	... 25 more
+Caused by: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [com.alibaba.druid.pool.DruidDataSource] for bean with name 'dataSource' defined in class path resource [spring-datasource.xml]; nested exception is java.lang.ClassNotFoundException: com.alibaba.druid.pool.DruidDataSource
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1327)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:452)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:320)
+	... 43 more
+Caused by: java.lang.ClassNotFoundException: com.alibaba.druid.pool.DruidDataSource
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.springframework.util.ClassUtils.forName(ClassUtils.java:236)
+	at org.springframework.beans.factory.support.AbstractBeanDefinition.resolveBeanClass(AbstractBeanDefinition.java:392)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doResolveBeanClass(AbstractBeanFactory.java:1348)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1319)
+	... 49 more
+[INFO] [2017-08-04 13:52:31][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-datasource.xml]
+[INFO] [2017-08-04 13:52:32][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@735f7ae5: startup date [Fri Aug 04 13:52:32 CST 2017]; root of context hierarchy
+[INFO] [2017-08-04 13:52:33][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from URL [file:/C:/Users/wys/Documents/workspace-sts/HelpTools/target/classes/database.properties]
+[INFO] [2017-08-04 13:52:33][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO] [2017-08-04 13:52:39][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
+[INFO] [2017-08-04 13:52:40][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} closed
+[ERROR] [2017-08-04 13:52:40][org.springframework.test.context.TestContextManager]Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@3e11f9e9] to prepare test instance [test.TestMyBatis@1de5f259]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:319)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:232)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:175)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [spring-datasource.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\Users\wys\Documents\workspace-sts\HelpTools\target\classes\com\superdreamx\mapping\UserMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.superdreamx.User'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.superdreamx.User
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:681)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:121)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:100)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:250)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:64)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
+	... 25 more
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\Users\wys\Documents\workspace-sts\HelpTools\target\classes\com\superdreamx\mapping\UserMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.superdreamx.User'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.superdreamx.User
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:466)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:340)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1612)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1549)
+	... 40 more
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.superdreamx.User'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.superdreamx.User
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:120)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:92)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:464)
+	... 43 more
+Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.superdreamx.User'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.superdreamx.User
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:103)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:264)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:251)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElements(XMLMapperBuilder.java:243)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:116)
+	... 45 more
+Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.superdreamx.User'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.superdreamx.User
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:117)
+	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:130)
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:101)
+	... 49 more
+Caused by: java.lang.ClassNotFoundException: Cannot find class: com.superdreamx.User
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:190)
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:89)
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:256)
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:113)
+	... 51 more
+[INFO] [2017-08-04 13:57:17][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-datasource.xml]
+[INFO] [2017-08-04 13:57:18][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@4c15e7fd: startup date [Fri Aug 04 13:57:18 CST 2017]; root of context hierarchy
+[INFO] [2017-08-04 13:57:19][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from URL [file:/C:/Users/wys/Documents/workspace-sts/HelpTools/target/classes/database.properties]
+[INFO] [2017-08-04 13:57:19][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO] [2017-08-04 13:57:23][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
+[ERROR] [2017-08-04 13:57:24][org.springframework.test.context.TestContextManager]Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@35293c05] to prepare test instance [test.TestMyBatis@620aa4ea]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'test.TestMyBatis': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.superdreamx.service.UserService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:307)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:384)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:110)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:319)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:232)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:175)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.superdreamx.service.UserService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1100)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:960)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:855)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:441)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:419)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:544)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:155)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:304)
+	... 26 more
+[INFO] [2017-08-04 13:57:24][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@4c15e7fd: startup date [Fri Aug 04 13:57:18 CST 2017]; root of context hierarchy
+[INFO] [2017-08-04 13:57:24][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} closed
+[INFO] [2017-08-04 14:03:20][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-datasource.xml]
+[INFO] [2017-08-04 14:03:22][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@4c15e7fd: startup date [Fri Aug 04 14:03:22 CST 2017]; root of context hierarchy
+[INFO] [2017-08-04 14:03:23][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from URL [file:/C:/Users/wys/Documents/workspace-sts/HelpTools/target/classes/database.properties]
+[INFO] [2017-08-04 14:03:24][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO] [2017-08-04 14:03:30][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
+[ERROR] [2017-08-04 14:03:31][org.springframework.test.context.TestContextManager]Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@35293c05] to prepare test instance [test.TestMyBatis@620aa4ea]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'test.TestMyBatis': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.superdreamx.service.UserService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:307)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:384)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:110)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:319)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:232)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:175)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.superdreamx.service.UserService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1100)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:960)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:855)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:441)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:419)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:544)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:155)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:304)
+	... 26 more
+[INFO] [2017-08-04 14:03:31][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@4c15e7fd: startup date [Fri Aug 04 14:03:22 CST 2017]; root of context hierarchy
+[INFO] [2017-08-04 14:03:31][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} closed
+[INFO] [2017-08-04 14:12:31][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-datasource.xml]
+[INFO] [2017-08-04 14:12:32][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@735f7ae5: startup date [Fri Aug 04 14:12:32 CST 2017]; root of context hierarchy
+[INFO] [2017-08-04 14:12:33][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from URL [file:/C:/Users/wys/Documents/workspace-sts/HelpTools/target/classes/database.properties]
+[INFO] [2017-08-04 14:12:33][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO] [2017-08-04 14:12:36][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
+[INFO] [2017-08-04 14:12:38][test.TestMyBatis]{"age":1,"id":1,"password":"superdreamx","userName":"superdreamx"}
+[INFO] [2017-08-04 14:12:38][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@735f7ae5: startup date [Fri Aug 04 14:12:32 CST 2017]; root of context hierarchy
+[INFO] [2017-08-04 14:12:38][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} closed

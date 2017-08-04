@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"  
+    xmlns:context="http://www.springframework.org/schema/context"  
+    xmlns:mvc="http://www.springframework.org/schema/mvc"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans    
+                        http://www.springframework.org/schema/beans/spring-beans-3.1.xsd    
+                        http://www.springframework.org/schema/context    
+                        http://www.springframework.org/schema/context/spring-context-3.1.xsd    
+                        http://www.springframework.org/schema/mvc    
+                        http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">  
+
+	<!-- 自动扫描 -->  
+    <context:component-scan base-package="com.superdreamx" />  
+    
+    <!-- 属性文件加载器  -->
+    <bean id="propertyConfigurer"
+          class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>classpath*:database.properties</value>
+            </list>
+        </property>
+        <property name="ignoreUnresolvablePlaceholders" value="true"/>
+    </bean>
+
+    <!-- 事务管理 -->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <!-- 配置mybatis框架-->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="mapperLocations" value="classpath*:com/superdreamx/mapping/*.xml"/>
+    </bean>
+    <!--mybatis扫描basePackage下所有接口类，并自动与同名的映射xml文件匹配，生成代理-->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.superdreamx.IDao"/>
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+        <!-- 只匹配以@Repository标识的接口-->
+        <!--<property name="annotationClass" value="org.springframework.stereotype.Repository"/>-->
+    </bean>
+
+
+    <!--druid 日志Filter配置 -->
+    <!-- <bean id="logFilter" class="com.alibaba.druid.filter.logging.Log4jFilter">
+        <property name="statementExecutableSqlLogEnable" value="true" />
+    </bean>-->
+    <!-- druid 状态Filter配置 -->
+    <!--<bean id="statFilter" class="com.alibaba.druid.filter.stat.StatFilter">
+        &lt;!&ndash;慢SQL记录为10秒&ndash;&gt;
+        <property name="slowSqlMillis" value="5000" />
+        <property name="logSlowSql" value="true" />
+        <property name="mergeSql" value="true" />
+    </bean>-->
+
+    <!-- druid 数据源配置 -->
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
+        <!-- 基本属性 url、user、password -->
+        <property name="driverClassName" value="${database.driverClassName}"/>
+        <property name="url"
+                  value="${database.url}"/>
+        <property name="username" value="${database.username}"/>
+        <property name="password" value="${database.password}"/>
+
+        <!-- 配置初始化大小、最小、最大 -->
+        <property name="initialSize" value="2"/>
+        <property name="maxActive" value="10"/>
+        <property name="minIdle" value="2"/>
+        <!-- 配置获取连接等待超时的时间(毫秒) -->
+        <property name="maxWait" value="60000"/>
+
+        <!-- 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒 -->
+        <property name="timeBetweenEvictionRunsMillis" value="60000"/>
+        <!-- 配置一个连接在池中最小生存的时间，单位是毫秒 -->
+        <property name="minEvictableIdleTimeMillis" value="300000"/>
+
+        <!-- 验证连接有效与否的SQL，不同的数据配置不同 -->
+        <property name="validationQuery" value="SELECT 'x'"/>
+        <!-- 空闲连接检测，如果空闲时间大于timeBetweenEvictionRunsMillis，
+                                          则执行validationQuery检测连接是否有效 -->
+        <property name="testWhileIdle" value="true"/>
+        <!--申请、归汉链接时是否执行validationQuery检测连接有效性-->
+        <property name="testOnBorrow" value="false"/>
+        <property name="testOnReturn" value="false"/>
+
+        <!-- 打开PSCache，并且指定每个连接上PSCache的大小,Mysql5.5以上版本建议开启 -->
+        <property name="poolPreparedStatements" value="true"/>
+        <property name="maxOpenPreparedStatements" value="100"/>
+
+        <!-- 配置监控统计拦截的filters -->
+        <property name="filters" value="stat,slf4j"/>
+        <!--<property name="proxyFilters">
+            <list>
+                <ref bean="logFilter"/>
+                <ref bean="statFilter"/>
+            </list>
+        </property>-->
+    </bean>
+
+</beans>
